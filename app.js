@@ -41,7 +41,7 @@ app.use(methodOverride("_method"))
 app.use(express.static(path.join(__dirname, "public")))
 
 const store = new MongoStore({
-    mongoUrl: dbLocal,
+    mongoUrl: dbUrl,
     touchAfter: 24 * 60 *60 
 })
 
