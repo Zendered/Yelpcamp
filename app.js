@@ -49,7 +49,7 @@ store.on("error", function(e) {
     console.log("SESSION STORE ERROR!", e)
 })
 
-const secret = procces.env.SECRET || "thisisnotasecret"
+const secret = process.env.SECRET || "thisisnotasecret"
 const sessionConfig = {
     store,
     name: "session",
@@ -144,6 +144,6 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error", { message })
 })
 
-const port = procces.env.PORT || 3000
+const port = process.env.PORT || 3000
 
-app.listen( port, () => console.log("Server ON"))
+app.listen( port, () => console.log(`Server ON! "port:${port}"`))
